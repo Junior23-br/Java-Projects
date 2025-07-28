@@ -30,30 +30,30 @@ public class Persona {
     }
 
     //Verificar que el nombre contenga 5 o ams letras
-    public Boolean nameCheck() {
-        return name.length() >= 5;
+    public boolean nameCheck() {
+        return name.length() > 4;
     }
 
     //Verificar que su edad este entre 0 y 120
-    public Boolean ageCheck() {
-        Boolean check = false;
+    public boolean ageCheck() {
+        boolean check = false;
         if (age > 0 && age < 120) {
             check = true;
         }
         return check;
     }
 
-    //Verificar los caracteres validosd del name
-    public Boolean nameAZCheck() {
-        Boolean checkName = false;
-        char[] nameToChars = name.toCharArray();
-        for (char letter : nameToChars) {
-            if (Character.isLetter(letter)) {
-                return false;
+    //Verificar los caracteres validos del name
+    public boolean nameAZCheck() {
+        boolean check = false;
+        char [] nameToChars = name.toCharArray(); //Se convierte en char el name
+        for (char letra : nameToChars) {
+            if (!Character.isLetter(letra)) {
+                return check;
             }
         }
 
-        checkName = true;
+        check = true;
         return true;
     }
 
