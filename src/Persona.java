@@ -26,7 +26,7 @@ public class Persona {
 
     //Verificar que la persona sea mayor de 18 años
     public Boolean isOlder() {
-        return age > 18;
+        return age >= 18;
     }
 
     //Verificar que el nombre contenga 5 o ams letras
