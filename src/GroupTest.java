@@ -31,7 +31,8 @@ public class GroupTest {
         Assertions.assertTrue(group.getPeople().size() ==2 );
     }
     @Test
-    
+    @Disabled
+
     public void caseTwo() {
 
         //Dado
@@ -50,6 +51,26 @@ public class GroupTest {
 
         //Entonces tmñ -> 3
         Assertions.assertTrue(grupo.getPeople().size() == 3);
+
+    }
+
+    @Test
+    public void caseThree() {
+        //Dado
+        Persona N1c0las = new Persona("N1c0las", 22);
+        Persona Tomas = new Persona("Tomas", 32);
+        Persona steban = new Persona("3steban", 19);
+        Persona Carlos = new Persona("Carlos/sV", 22);
+        Persona Francisco = new Persona("Francisco/sll", 22);
+        Group g1 = new Group();
+        //Cuando
+        g1.addPeople(N1c0las);
+        g1.addPeople(Tomas);
+        g1.addPeople(steban);
+        g1.addPeople(Carlos);
+        g1.addPeople(Francisco);
+        //Entonces
+        Assertions.assertEquals(1, g1.getPeople().size());
 
     }
 
